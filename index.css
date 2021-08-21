@@ -1,0 +1,181 @@
+:root {
+  /* Primary */
+  --strongCyan: hsl(172, 67%, 45%);
+  /* Neutral */
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan_1: hsl(186, 14%, 43%);
+  --darkGrayishCyan_2: hsl(184, 14%, 56%);
+  --lightGrayishCyan_1: hsl(185, 41%, 84%);
+  --lightGrayishCyan_2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--lightGrayishCyan_1);
+}
+
+main {
+  background-color: var();
+}
+h4 {
+  margin: 0.5em 0;
+  font-size: 18px;
+}
+.title {
+  text-align: center;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+section {
+  background-color: white;
+  padding: 1em;
+  border-radius: 15px;
+  margin: auto;
+  max-width: 375px;
+}
+.button-div button {
+  background-color: var(--veryDarkCyan);
+  color: white;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-weight: bolder;
+  width: 47.5%;
+  margin: 0.5em 0 0 0;
+  box-sizing: border-box;
+}
+.bill-input,
+.no-of-people {
+  background-color: var(--lightGrayishCyan_2);
+  border-radius: 5px;
+  color: var(--veryDarkCyan);
+  border: none;
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 1em 0;
+  font-size: 1em;
+  text-align: right;
+  font-weight: bolder;
+}
+.button-div button:hover,
+.reset:hover {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+.tip-div {
+  padding: 1em;
+  background-color: var(--veryDarkCyan);
+  color: white;
+  border-radius: 10px;
+}
+.tip-div h4 {
+  margin: 0;
+}
+.result-tip-amount,
+.result-total {
+  margin: 1.5em 0;
+}
+#result-tip-amount,
+#result-total {
+  color: var(--strongCyan);
+  font-weight: bolder;
+}
+h4 ~ p {
+  font-size: 16px;
+  margin: 0;
+}
+.reset {
+  width: 100%;
+  background-color: var(--lightGrayishCyan_1);
+  color: var(--veryDarkCyan);
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+i {
+  color: var(--darkGrayishCyan_2);
+  position: absolute;
+  top: 90px;
+  left: 15px;
+}
+.tip-div2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip.tip-custom {
+  background-color: var(--lightGrayishCyan_2);
+  color: var(--darkGrayishCyan_1);
+}
+@media screen and (min-width: 920px) {
+  main {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+  section {
+    display: flex;
+    max-width: 856px;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+  }
+  .bill-div,
+  .tip-div {
+    min-width: 375px;
+    box-sizing: border-box;
+    margin: 0.5em;
+    position: relative;
+  }
+  .bill-input,
+  .no-of-people {
+    margin: 0;
+  }
+  .button-div button {
+    width: 30%;
+    padding: 0.5em;
+  }
+  .select-tip {
+    margin-bottom: 0;
+  }
+  .reset {
+    position: relative;
+    top: 120px;
+  }
+  i {
+    top: 55px;
+    left: 20px;
+  }
+  .tip-div2 {
+    align-items: center;
+  }
+  .tip-div2 p {
+    margin: 0;
+  }
+  .result-tip-amount,
+  .result-total {
+    margin: 0.5em 0;
+  }
+}
+
+/* signature */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5em 1em;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
