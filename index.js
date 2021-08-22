@@ -1,16 +1,24 @@
 let bill = document.getElementsByClassName("bill-input");
-let tip = document.getElementsByClassName("tip");
+let tipAmount = document.getElementById("result-tip-amount");
+let totalAmount = document.getElementById("result-total");
+let people = document.getElementsByClassName("no-of-people");
 
-for(var i = 0; i<=4; i++){
-    console.log(tipAmount[i].innerText);
-}
-console.log(bill[0].value,tipAmount);
-function total(){
-    let total = "0";
-    total = tipAmount + bill[0].value;  
+function tip(btn){
+    var a = (parseInt(btn.innerText.slice(0,2)) * bill[0].value /(100*people[0].value)).toFixed(2);
+    console.log(tipAmount.innerText);
+    tipAmount.innerText = tipAmount.innerText.slice(0,1) + ' ' + a;
+    function total(){
+        let total = (parseInt(bill[0].value)/people[0].value + parseInt(a)).toFixed(2);  
+        console.log(typeof a, typeof bill[0].value);
+        totalAmount.innerText = totalAmount.innerText.slice(0,1) + ' ' + total;
+    }
+    total();
+    return a;
 }
 
 function reset(){
     bill[0].value = "";
-
+    people[0].value = "";
+    tipAmount.innerText = tipAmount.innerText.slice(0,1) + ' ' + 0;
+    totalAmount.innerText = totalAmount.innerText.slice(0,1) + ' ' + 0; 
 }
