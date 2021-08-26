@@ -32,7 +32,16 @@
           <input type="text" class="bill-input" />
         </div>
 
-        <div>
+        <div style="position: relative;">
+          <div style="display: flex;align-items: center;justify-content: space-between;">
+            <h4>Number of People</h4>
+            <span class="errorMsg">Can't be zero</span>
+          </div>
+          <i class="fa fa-user icon"></i>
+          <input type="text" class="input-field no-of-people" />
+        </div>
+
+        <div class="m-div">
           <h4 class="select-tip">Select Tip %</h4>
           <div class="button-div">
             <button name="tip-5" class="tip tip-5" onclick=tip(this)>5%</button>
@@ -40,15 +49,11 @@
             <button name="tip-10" class="tip tip-10" onclick=tip(this)>10%</button>
             <button name="tip-25" class="tip tip-25" onclick=tip(this)>25%</button>
             <button name="tip-50" class="tip tip-50" onclick=tip(this)>50%</button>
-            <button name="tip-custom" class="tip tip-custom" onclick=tip(this)>Custom</button>
+            <button name="tip-custom" class="tip tip-custom" id="btn-custom" onclick="custom()">Custom</button>
+            <input type=" text" name="custom-tip" class="tip tip-custom" id="tip-custom" onfocusout="result()" />
           </div>
         </div>
 
-        <div style="position: relative;">
-          <h4>Number of People</h4>
-          <i class="fa fa-user icon"></i>
-          <input type="text" class="input-field no-of-people" />
-        </div>
       </div>
       <div class="tip-div">
         <div class="tip-div2">
